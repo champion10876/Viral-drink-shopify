@@ -197,7 +197,9 @@
 
             {% render 'price', product: card_product, price_class: '' %}
 
-            {%- if !show_quick_add -%}
+            {%- if show_quick_add -%}
+
+            {%- else -%}
               <div {{ block.shopify_attributes }}>
                 <product-form class="product-form">
                   <div class="product-form__error-message-wrapper" role="alert" hidden>
